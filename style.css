@@ -479,6 +479,19 @@ ul {
   min-height: 560px;
 }
 
+.split-section--text-only {
+  grid-template-columns: 1fr;
+  min-height: auto;
+}
+
+.split-section--text-only .split-text {
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.split-section--text-only .split-content {
+  max-width: 620px;
+}
+
 .split-image {
   overflow: hidden;
 }
