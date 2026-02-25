@@ -114,55 +114,56 @@
   const galleryDotsEl = document.getElementById('gallery-dots');
 
   if (galleryTrack && galleryPrev && galleryNext) {
-    const slides = galleryTrack.querySelectorAll('.gallery-slide');
+    const slides = Array.from(galleryTrack.querySelectorAll('.gallery-slide'));
+    const total = slides.length;
     let galleryIndex = 0;
 
-    function slidesPerView() {
+    function perView() {
       return window.innerWidth < 768 ? 1 : 3;
     }
 
-    function totalPages() {
-      return Math.ceil(slides.length / slidesPerView());
+    function updateWidths() {
+      slides.forEach(s => { s.style.minWidth = (100 / perView()) + '%'; });
     }
 
-    function buildGalleryDots() {
-      if (!galleryDotsEl) return;
-      galleryDotsEl.innerHTML = '';
-      for (let i = 0; i < totalPages(); i++) {
-        const d = document.createElement('button');
-        d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-        d.setAttribute('aria-label', `Página ${i + 1}`);
-        d.addEventListener('click', () => goGallery(i));
-        galleryDotsEl.appendChild(d);
+    // translateX as % of the track's total width (track = total * slideWidth)
+    // slideWidth = viewportWidth / perView
+    // trackWidth = total * viewportWidth / perView
+    // offset = index * viewportWidth / perView
+    // offset% of track = index / total * 100
+    function goGallery(index) {
+      const maxIndex = total - perView();
+      galleryIndex = Math.max(0, Math.min(index, maxIndex));
+      galleryTrack.style.transform = `translateX(-${galleryIndex / total * 100}%)`;
+      if (galleryDotsEl) {
+        galleryDotsEl.querySelectorAll('.gallery-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === galleryIndex);
+        });
       }
     }
 
-    function updateGalleryDots() {
+    // 1 dot per slide
+    function buildGalleryDots() {
       if (!galleryDotsEl) return;
-      galleryDotsEl.querySelectorAll('.gallery-dot').forEach((d, i) => {
-        d.classList.toggle('active', i === galleryIndex);
+      galleryDotsEl.innerHTML = '';
+      slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', `Imagem ${i + 1}`);
+        d.addEventListener('click', () => goGallery(i));
+        galleryDotsEl.appendChild(d);
       });
-    }
-
-    function goGallery(index) {
-      const perView = slidesPerView();
-      galleryIndex = Math.max(0, Math.min(index, totalPages() - 1));
-      const offset = galleryIndex * perView * (100 / slides.length);
-      galleryTrack.style.transform = `translateX(-${offset}%)`;
-      // Update each slide width
-      slides.forEach(s => { s.style.minWidth = (100 / perView) + '%'; });
-      updateGalleryDots();
     }
 
     galleryPrev.addEventListener('click', () => goGallery(galleryIndex - 1));
     galleryNext.addEventListener('click', () => goGallery(galleryIndex + 1));
 
     window.addEventListener('resize', () => {
-      galleryIndex = 0;
-      buildGalleryDots();
-      goGallery(0);
+      updateWidths();
+      goGallery(Math.min(galleryIndex, total - perView()));
     });
 
+    updateWidths();
     buildGalleryDots();
     goGallery(0);
   }

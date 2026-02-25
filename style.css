@@ -204,6 +204,7 @@ ul {
   display: flex;
   align-items: flex-end;
   padding-bottom: var(--space-xl);
+  background: #2a2320;
 }
 
 .hero-bg {
@@ -1320,7 +1321,7 @@ ul {
   }
 
   .split-image {
-    height: 300px;
+    display: none;
   }
 
   .treatments-left {
