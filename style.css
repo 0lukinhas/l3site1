@@ -953,10 +953,9 @@ ul {
 }
 
 .gallery-slide {
-  min-width: 33.333%;
+  flex: 0 0 calc(100% / 3);
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  flex-shrink: 0;
 }
 
 .gallery-slide img {
@@ -1329,7 +1328,7 @@ ul {
   }
 
   .gallery-slide {
-    min-width: 100%;
+    flex: 0 0 100%;
   }
 
   .values-grid {

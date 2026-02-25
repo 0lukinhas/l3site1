@@ -122,19 +122,15 @@
       return window.innerWidth < 768 ? 1 : 3;
     }
 
-    function updateWidths() {
-      slides.forEach(s => { s.style.minWidth = (100 / perView()) + '%'; });
+    // Use real pixel width of first slide for reliable translation
+    function slideWidth() {
+      return slides[0].getBoundingClientRect().width;
     }
 
-    // translateX as % of the track's total width (track = total * slideWidth)
-    // slideWidth = viewportWidth / perView
-    // trackWidth = total * viewportWidth / perView
-    // offset = index * viewportWidth / perView
-    // offset% of track = index / total * 100
     function goGallery(index) {
       const maxIndex = total - perView();
       galleryIndex = Math.max(0, Math.min(index, maxIndex));
-      galleryTrack.style.transform = `translateX(-${galleryIndex / total * 100}%)`;
+      galleryTrack.style.transform = `translateX(-${galleryIndex * slideWidth()}px)`;
       if (galleryDotsEl) {
         galleryDotsEl.querySelectorAll('.gallery-dot').forEach((d, i) => {
           d.classList.toggle('active', i === galleryIndex);
@@ -159,11 +155,9 @@
     galleryNext.addEventListener('click', () => goGallery(galleryIndex + 1));
 
     window.addEventListener('resize', () => {
-      updateWidths();
       goGallery(Math.min(galleryIndex, total - perView()));
     });
 
-    updateWidths();
     buildGalleryDots();
     goGallery(0);
   }
