@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Clínica de Estética de Alto Padrão. Harmonização Facial, Bioestimuladores, Botox e tratamentos exclusivos. Agende sua avaliação gratuita." />
+    <title>Clínica Estética Premium — Beleza que reflete sua essência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- A. TOP BAR -->
+    <div class="promo-bar" id="promo-bar">
+        <p>AGENDE SUA AVALIAÇÃO GRATUITA NESTE MÊS</p>
+    </div>
+
+    <!-- B. HEADER -->
+    <header class="site-header" id="site-header">
+        <nav class="nav-container">
+            <ul class="nav-left">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#tratamentos">Tratamentos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#clinica">A Clínica</a></li>
+            </ul>
+
+            <div class="nav-logo">
+                <a href="#inicio" class="logo-text">CLINICA ESTETICA</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="nav-icon" id="btn-search" aria-label="Pesquisar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                </button>
+                <button class="nav-icon" id="btn-user" aria-label="Área do Paciente">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </button>
+                <a href="https://wa.me/5511999999999" class="nav-icon" id="btn-whatsapp" aria-label="WhatsApp"
+                    target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- C. HERO SECTION -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1600&q=80&fit=crop&crop=faces,center"
+                alt="Clínica de Estética Premium" class="hero-img" id="hero-img-1" />
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80&fit=crop&crop=faces"
+                alt="Beleza que reflete sua essência" class="hero-img hidden" id="hero-img-2" />
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1600&q=80&fit=crop&crop=center"
+                alt="Tratamentos estéticos premium" class="hero-img hidden" id="hero-img-3" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">CONHEÇA NOSSA CLÍNICA</span>
+            <h1 class="hero-title">Beleza que reflete<br /><em>a sua essência</em></h1>
+            <a href="#clinica" class="btn-hero">Nossa História</a>
+        </div>
+        <div class="hero-dots">
+            <button class="dot active" id="dot-0" aria-label="Slide 1"></button>
+            <button class="dot" id="dot-1" aria-label="Slide 2"></button>
+            <button class="dot" id="dot-2" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- D. SOCIAL PROOF / DEPOIMENTOS -->
+    <section class="testimonials-section" id="resultados">
+        <div class="testimonials-wrapper">
+            <button class="testem-arrow left" id="testem-prev" aria-label="Anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </button>
+
+            <div class="testimonials-track" id="testimonials-track">
+                <div class="testimonial-card">
+                    <div class="testem-stars" aria-label="5 estrelas">★★★★★</div>
+                    <div class="testem-brand">VOGUE</div>
+                    <p class="testem-quote">"A clínica redefiniu o conceito de harmonização natural, entregando
+                        resultados sutis e elegantes."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testem-stars" aria-label="5 estrelas">★★★★★</div>
+                    <div class="testem-brand">ELLE</div>
+                    <p class="testem-quote">"Uma experiência transformadora que une ciência estética e sensibilidade
+                        artística em cada procedimento."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testem-stars" aria-label="5 estrelas">★★★★★</div>
+                    <div class="testem-brand">MARIE CLAIRE</div>
+                    <p class="testem-quote">"Referência em tratamentos de alta performance, com resultados que respeitam
+                        e realçam a beleza individual."</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="testem-arrow right" id="testem-next" aria-label="Próximo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+        </div>
+    </section>
+
+    <!-- E. MARQUEE -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>TECNOLOGIA DE PONTA</span>
+            <span class="marquee-dot">•</span>
+            <span>ATENDIMENTO PERSONALIZADO</span>
+            <span class="marquee-dot">•</span>
+            <span>RESULTADOS NATURAIS</span>
+            <span class="marquee-dot">•</span>
+            <span>PROFISSIONAIS ESPECIALIZADOS</span>
+            <span class="marquee-dot">•</span>
+            <span>TECNOLOGIA DE PONTA</span>
+            <span class="marquee-dot">•</span>
+            <span>ATENDIMENTO PERSONALIZADO</span>
+            <span class="marquee-dot">•</span>
+            <span>RESULTADOS NATURAIS</span>
+            <span class="marquee-dot">•</span>
+            <span>PROFISSIONAIS ESPECIALIZADOS</span>
+            <span class="marquee-dot">•</span>
+        </div>
+    </div>
+
+    <!-- F. VÍDEO / IMAGEM DE DESTAQUE -->
+    <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&q=85&fit=crop&crop=center"
+            alt="Tratamento estético de alto padrão" class="feature-img" />
+        <span class="sound-label">SOUND ON</span>
+    </div>
+
+    <!-- G. SPLIT SECTION -->
+    <section class="split-section" id="clinica">
+        <div class="split-image">
+            <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=800&q=85&fit=crop&crop=center"
+                alt="Textura de produto de skincare premium" />
+        </div>
+        <div class="split-text">
+            <div class="split-content">
+                <h2>Inspirados na beleza sem esforço e no design moderno,</h2>
+                <p>nosso objetivo é criar o plano de tratamento perfeito para você. É tudo o que amamos sobre
+                    autocuidado que achamos que você também vai amar.</p>
+                <a href="#" class="split-link">MAIS SOBRE A CLÍNICA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- H. SERVIÇO EM DESTAQUE -->
+    <section class="featured-treatment">
+        <div class="featured-bg">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1600&q=80&fit=crop&crop=center"
+                alt="Ambiente da clínica" class="featured-bg-img" />
+        </div>
+        <div class="featured-overlay"></div>
+        <div class="featured-card">
+            <span class="featured-badge">MAIS BUSCADO</span>
+            <div class="featured-card-img">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80&fit=crop&crop=center"
+                    alt="Harmonização Facial" />
+            </div>
+            <h3 class="featured-card-title">Harmonização Facial</h3>
+            <p class="featured-card-sub">realce seus traços naturais com segurança</p>
+            <a href="https://wa.me/5511999999999" class="btn-outline-dark" target="_blank" rel="noopener">AGENDAR
+                AVALIAÇÃO</a>
+        </div>
+    </section>
+
+    <!-- I. VALUE PROPOSITIONS -->
+    <section class="values-section">
+        <div class="values-container">
+            <div class="values-title">
+                <span class="values-label">NOSSO COMPROMISSO</span>
+                <h2>Beleza que faz bem<br />para você.</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-item" data-reveal>
+                    <div class="value-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.2">
+                            <path
+                                d="M12 22c4.97-2.34 8-6.22 8-10.23 0-1.35-.54-2.65-1.5-3.6C17.55 7.2 16.27 6.67 15 6.67c-1.27 0-2.45.53-3.5 1.5C10.45 7.2 9.27 6.67 8 6.67c-1.27 0-2.55.53-3.5 1.5C3.54 9.12 3 10.42 3 11.77c0 4 3.03 7.89 8 10.23z" />
+                        </svg>
+                    </div>
+                    <h4>PRODUTOS PREMIUM</h4>
+                    <p>Utilizamos apenas os melhores ativos e tecnologias aprovadas internacionalmente.</p>
+                </div>
+                <div class="value-item" data-reveal>
+                    <div class="value-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                        </svg>
+                    </div>
+                    <h4>ALTA TECNOLOGIA</h4>
+                    <p>Equipamentos de última geração para resultados precisos e duradouros.</p>
+                </div>
+                <div class="value-item" data-reveal>
+                    <div class="value-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h4>ATENDIMENTO HUMANO</h4>
+                    <p>Cuidado personalizado, escuta ativa e uma equipe dedicada ao seu bem-estar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- J. TRATAMENTOS -->
+    <section class="treatments-section" id="tratamentos">
+        <div class="treatments-header">
+            <h3>NOSSOS TRATAMENTOS</h3>
+            <a href="#" class="link-all">VER TODOS</a>
+        </div>
+        <div class="treatments-grid">
+            <div class="treatments-left">
+                <div class="treatment-card" data-reveal>
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80&fit=crop&crop=center"
+                            alt="Botox" />
+                        <span class="treatment-badge">CLÁSSICO</span>
+                    </div>
+                    <div class="treatment-info">
+                        <h4>Botox</h4>
+                        <p>Suaviza linhas de expressão com naturalidade e precisão.</p>
+                        <a href="https://wa.me/5511999999999" class="btn-sm">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="treatment-card" data-reveal>
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80&fit=crop&crop=center"
+                            alt="Bioestimuladores" />
+                        <span class="treatment-badge">NOVIDADE</span>
+                    </div>
+                    <div class="treatment-info">
+                        <h4>Bioestimuladores</h4>
+                        <p>Estimula a produção natural de colágeno para rejuvenescimento progressivo.</p>
+                        <a href="https://wa.me/5511999999999" class="btn-sm">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="treatment-card" data-reveal>
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80&fit=crop&crop=face"
+                            alt="Peeling" />
+                        <span class="treatment-badge">RECOMENDADO</span>
+                    </div>
+                    <div class="treatment-info">
+                        <h4>Peeling</h4>
+                        <p>Renovação celular para pele mais luminosa, uniforme e saudável.</p>
+                        <a href="https://wa.me/5511999999999" class="btn-sm">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="treatment-card" data-reveal>
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80&fit=crop&crop=face"
+                            alt="Preenchimento" />
+                        <span class="treatment-badge">POPULAR</span>
+                    </div>
+                    <div class="treatment-info">
+                        <h4>Preenchimento</h4>
+                        <p>Restaura volume e contorno com ácido hialurônico de alta pureza.</p>
+                        <a href="https://wa.me/5511999999999" class="btn-sm">SABER MAIS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="treatments-right">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=85&fit=crop&crop=face,top"
+                    alt="Clínica de Estética Premium" class="treatments-portrait" />
+            </div>
+        </div>
+    </section>
+
+    <!-- K. INSTAGRAM FEED -->
+    <section class="instagram-section">
+        <div class="instagram-header">
+            <h2>Acompanhe nossos resultados</h2>
+            <a href="https://instagram.com" class="insta-follow" target="_blank" rel="noopener">@clinicaestetica</a>
+        </div>
+        <div class="instagram-grid">
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1609207807107-7b2b7b3de5a4?w=300&q=80&fit=crop&crop=face"
+                    alt="Resultado estético" />
+                <div class="insta-overlay">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80&fit=crop&crop=face"
+                    alt="Resultado estético" />
+                <div class="insta-overlay">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=300&q=80&fit=crop&crop=face"
+                    alt="Resultado estético" />
+                <div class="insta-overlay">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=300&q=80&fit=crop&crop=face"
+                    alt="Resultado estético" />
+                <div class="insta-overlay">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?w=300&q=80&fit=crop&crop=face"
+                    alt="Resultado estético" />
+                <div class="insta-overlay">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L. FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-top">
+            <div class="footer-vip">
+                <span class="footer-vip-badge">EXCLUSIVO</span>
+                <p class="footer-vip-title">Grupo VIP de Ofertas</p>
+                <p class="footer-vip-desc">Entre no nosso grupo do WhatsApp e receba promoções exclusivas, novidades e
+                    dicas de beleza antes de todo mundo.</p>
+                <a href="https://wa.me/5511999999999" class="btn-vip-whatsapp" target="_blank" rel="noopener"
+                    id="btn-vip-wpp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                    </svg>
+                    Entrar no Grupo VIP
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>A CLÍNICA</h5>
+                    <ul>
+                        <li><a href="#clinica">Nossa História</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#footer">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>SOCIAL</h5>
+                    <ul>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>LOCALIZAÇÃO</h5>
+                    <ul>
+                        <li><a href="#">São Paulo — SP</a></li>
+                        <li><a href="#">Jundiaí — SP</a></li>
+                        <li class="lang-select">
+                            <select id="lang-select" aria-label="Selecionar idioma">
+                                <option value="pt-BR">PT — Brasil</option>
+                                <option value="en">EN — United States</option>
+                                <option value="es">ES — España</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo-big">CLINICA ESTETICA</div>
+            <div class="footer-legal">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+            <p class="footer-copy">© 2025 Clínica Estética Premium. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE -->
+    <a href="https://wa.me/5511999999999" class="float-btn" id="float-btn" target="_blank" rel="noopener"
+        aria-label="Agendar agora via WhatsApp">
+        <span class="float-btn-text">Agende<br />Agora</span>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
