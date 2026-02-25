@@ -1,3 +1,4 @@
+
 /* ── JS: MAIN.JS ─────────────────────────────────────────── */
 (function () {
   'use strict';
@@ -74,44 +75,98 @@
   const testemNext = document.getElementById('testem-next');
   let currentTestim = 0;
 
-  function showTestimonial(index) {
-    testimonialCards.forEach((card, i) => {
-      card.style.display = i === index ? 'flex' : 'none';
-      card.style.flexDirection = 'column';
-      card.style.gap = '16px';
-    });
-  }
-
   function isMobileTestim() {
     return window.innerWidth < 1024;
   }
 
   function applyTestimonialLayout() {
     if (isMobileTestim()) {
-      showTestimonial(currentTestim);
-      testemPrev.style.display = 'flex';
-      testemNext.style.display = 'flex';
+      testimonialCards.forEach((card, i) => {
+        card.style.display = i === currentTestim ? 'flex' : 'none';
+        card.style.flexDirection = 'column';
+        card.style.gap = '16px';
+      });
     } else {
       testimonialCards.forEach(card => {
         card.style.display = 'flex';
       });
-      testemPrev.style.display = 'flex';
-      testemNext.style.display = 'flex';
     }
   }
 
-  testemPrev.addEventListener('click', () => {
-    currentTestim = (currentTestim - 1 + testimonialCards.length) % testimonialCards.length;
-    if (isMobileTestim()) showTestimonial(currentTestim);
-  });
-
-  testemNext.addEventListener('click', () => {
-    currentTestim = (currentTestim + 1) % testimonialCards.length;
-    if (isMobileTestim()) showTestimonial(currentTestim);
-  });
+  if (testemPrev && testemNext) {
+    testemPrev.addEventListener('click', () => {
+      currentTestim = (currentTestim - 1 + testimonialCards.length) % testimonialCards.length;
+      applyTestimonialLayout();
+    });
+    testemNext.addEventListener('click', () => {
+      currentTestim = (currentTestim + 1) % testimonialCards.length;
+      applyTestimonialLayout();
+    });
+  }
 
   applyTestimonialLayout();
   window.addEventListener('resize', applyTestimonialLayout);
+
+  // ── GALLERY SLIDER ───────────────────────────────────────
+  const galleryTrack = document.getElementById('gallery-track');
+  const galleryPrev = document.getElementById('gallery-prev');
+  const galleryNext = document.getElementById('gallery-next');
+  const galleryDotsEl = document.getElementById('gallery-dots');
+
+  if (galleryTrack && galleryPrev && galleryNext) {
+    const slides = galleryTrack.querySelectorAll('.gallery-slide');
+    let galleryIndex = 0;
+
+    function slidesPerView() {
+      return window.innerWidth < 768 ? 1 : 3;
+    }
+
+    function totalPages() {
+      return Math.ceil(slides.length / slidesPerView());
+    }
+
+    function buildGalleryDots() {
+      if (!galleryDotsEl) return;
+      galleryDotsEl.innerHTML = '';
+      for (let i = 0; i < totalPages(); i++) {
+        const d = document.createElement('button');
+        d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', `Página ${i + 1}`);
+        d.addEventListener('click', () => goGallery(i));
+        galleryDotsEl.appendChild(d);
+      }
+    }
+
+    function updateGalleryDots() {
+      if (!galleryDotsEl) return;
+      galleryDotsEl.querySelectorAll('.gallery-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === galleryIndex);
+      });
+    }
+
+    function goGallery(index) {
+      const perView = slidesPerView();
+      galleryIndex = Math.max(0, Math.min(index, totalPages() - 1));
+      const offset = galleryIndex * perView * (100 / slides.length);
+      galleryTrack.style.transform = `translateX(-${offset}%)`;
+      // Update each slide width
+      slides.forEach(s => { s.style.minWidth = (100 / perView) + '%'; });
+      updateGalleryDots();
+    }
+
+    galleryPrev.addEventListener('click', () => goGallery(galleryIndex - 1));
+    galleryNext.addEventListener('click', () => goGallery(galleryIndex + 1));
+
+    window.addEventListener('resize', () => {
+      galleryIndex = 0;
+      buildGalleryDots();
+      goGallery(0);
+    });
+
+    buildGalleryDots();
+    goGallery(0);
+  }
+
 
   // ── SCROLL REVEAL ───────────────────────────────────────
   const revealElements = document.querySelectorAll('[data-reveal], .treatment-card, .value-item');
